@@ -7,8 +7,8 @@ Created on 2015/11/3
 common模块的url配置。
 """
 
-from django.conf.urls import patterns, url
-
-urlpatterns = patterns('common.views',
-    url(r'^$', 'index', name='index'),
-)
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
